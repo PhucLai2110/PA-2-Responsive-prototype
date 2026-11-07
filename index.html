@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ClubFlow — quy trình tuyển thành viên câu lạc bộ">
+  <title>Tạo chiến dịch tuyển thành viên | ClubFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+  <header class="site-header">
+    <div class="shell head">
+      <a class="logo" href="index.html" aria-label="ClubFlow, về trang chiến dịch"><span class="logo-mark">✦</span> Club<span class="accent">Flow</span></a>
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a href="index.html" aria-current="page">Chiến dịch</a>
+        <a href="review.html">Duyệt hồ sơ</a>
+        <a href="interview.html">Lịch phỏng vấn</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell" id="main">
+    <div class="crumb">Quản lý tuyển thành viên <span aria-hidden="true">/</span> Tạo chiến dịch</div>
+    <div class="eyebrow">CLB Công nghệ thông tin · Tuyển thành viên 2026</div>
+    <h1>Tạo chiến dịch tuyển thành viên</h1>
+    <p class="lead">Thiết lập thông tin, thời gian nhận hồ sơ, các ban tuyển dụng và điều kiện ứng tuyển.</p>
+    <div class="notice">Chế độ prototype: biểu mẫu và các thao tác nghiệp vụ chỉ minh họa giao diện. Không có cơ sở dữ liệu hoặc lưu lịch thật.</div>
+    <form action="review.html" method="get">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>01 · Thông tin và thời gian</h2>
+        </div>
+        <div class="panel-body">
+          <div class="form-grid">
+            <div class="field">
+              <label for="campaign">Tên chiến dịch *</label>
+              <input id="campaign" name="campaign" type="text" value="Tuyển thành viên CLB Công nghệ thông tin 2026" required>
+            </div>
+            <div class="field">
+              <label for="club">Câu lạc bộ *</label>
+              <input id="club" name="club" type="text" value="CLB Công nghệ thông tin" required>
+            </div>
+            <div class="field">
+              <label for="opening">Ngày mở đơn *</label>
+              <input id="opening" name="opening" type="date" value="2026-10-15" required>
+            </div>
+            <div class="field">
+              <label for="closing">Ngày đóng đơn *</label>
+              <input id="closing" name="closing" type="date" value="2026-10-30" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="description">Mô tả chiến dịch</label>
+            <textarea id="description" name="description" rows="3">Tìm kiếm thành viên cho các ban Truyền thông, Sự kiện và Kỹ thuật; phát triển kỹ năng làm việc nhóm.</textarea>
+          </div>
+          <div class="field">
+            <label for="instructions">Hướng dẫn ứng tuyển</label>
+            <textarea id="instructions" name="instructions" rows="3">Nộp CV PDF (tối đa 5 MB), trình bày động lực ứng tuyển (tối đa 300 từ) và chọn các khung giờ có thể tham gia phỏng vấn.</textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>02 · Các ban và vị trí tuyển dụng</h2>
+          <p>Ba vị trí mẫu thuộc cùng một chiến dịch; tổng chỉ tiêu: 7 thành viên.</p>
+        </div>
+        <div class="panel-body">
+          <div class="positions-grid">
+            <fieldset class="position">
+              <legend>Vị trí 1 · Ban Truyền thông</legend>
+              <div class="field">
+                <label for="dept1">Ban / bộ phận</label>
+                <input id="dept1" name="dept1" type="text" value="Ban Truyền thông">
+              </div>
+              <div class="field">
+                <label for="position1">Tên vị trí</label>
+                <input id="position1" name="position1" type="text" value="Biên tập nội dung và truyền thông đa nền tảng">
+              </div>
+              <div class="field">
+                <label for="quota1">Chỉ tiêu</label>
+                <input id="quota1" name="quota1" type="number" value="3" min="1">
+              </div>
+              <div class="field">
+                <label for="job1">Mô tả công việc</label>
+                <textarea id="job1" name="job1" rows="3">Viết nội dung, lên kế hoạch bài đăng, phối hợp chiến dịch truyền thông.</textarea>
+              </div>
+              <div class="field">
+                <label for="requirements1">Yêu cầu</label>
+                <textarea id="requirements1" name="requirements1" rows="3">Viết tiếng Việt rõ ràng; biết sử dụng công cụ thiết kế là lợi thế.</textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="position">
+              <legend>Vị trí 2 · Ban Sự kiện</legend>
+              <div class="field">
+                <label for="dept2">Ban / bộ phận</label>
+                <input id="dept2" name="dept2" type="text" value="Ban Sự kiện">
+              </div>
+              <div class="field">
+                <label for="position2">Tên vị trí</label>
+                <input id="position2" name="position2" type="text" value="Điều phối hoạt động và hậu cần chương trình">
+              </div>
+              <div class="field">
+                <label for="quota2">Chỉ tiêu</label>
+                <input id="quota2" name="quota2" type="number" value="2" min="1">
+              </div>
+              <div class="field">
+                <label for="job2">Mô tả công việc</label>
+                <textarea id="job2" name="job2" rows="3">Lập kế hoạch tổ chức sự kiện, phối hợp các nhóm và hỗ trợ hậu cần.</textarea>
+              </div>
+              <div class="field">
+                <label for="requirements2">Yêu cầu</label>
+                <textarea id="requirements2" name="requirements2" rows="3">Chủ động, làm việc nhóm tốt và linh hoạt theo lịch sự kiện.</textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="position">
+              <legend>Vị trí 3 · Ban Kỹ thuật</legend>
+              <div class="field">
+                <label for="dept3">Ban / bộ phận</label>
+                <input id="dept3" name="dept3" type="text" value="Ban Kỹ thuật">
+              </div>
+              <div class="field">
+                <label for="position3">Tên vị trí</label>
+                <input id="position3" name="position3" type="text" value="Phát triển website quản lý hoạt động và hệ thống thông tin câu lạc bộ">
+              </div>
+              <div class="field">
+                <label for="quota3">Chỉ tiêu</label>
+                <input id="quota3" name="quota3" type="number" value="2" min="1">
+              </div>
+              <div class="field">
+                <label for="job3">Mô tả công việc</label>
+                <textarea id="job3" name="job3" rows="3">Xây dựng giao diện, hỗ trợ kỹ thuật và kiểm thử sản phẩm nội bộ.</textarea>
+              </div>
+              <div class="field">
+                <label for="requirements3">Yêu cầu</label>
+                <textarea id="requirements3" name="requirements3" rows="3">Biết HTML/CSS cơ bản, có tinh thần học hỏi.</textarea>
+              </div>
+            </fieldset>
+          </div>
+          <div class="actions">
+            <button class="btn secondary" type="button" disabled title="Thêm vị trí sẽ được triển khai ở PA sau">+ Thêm vị trí (mô phỏng)</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>03 · Xem trước và xuất bản</h2>
+        </div>
+        <div class="panel-body">
+          <div class="summary">
+            <div><strong>15/10/2026 – 30/10/2026</strong><span>Thời gian nhận đơn</span></div>
+            <div><strong>3 vị trí · 7 chỉ tiêu</strong><span>Phạm vi tuyển dụng</span></div>
+            <div><strong>Bản nháp</strong><span>Trạng thái minh họa</span></div>
+          </div>
+          <div class="actions">
+            <button class="btn secondary" type="button" disabled title="Chức năng lưu nháp chưa được triển khai">Lưu nháp (mô phỏng)</button>
+            <button class="btn secondary" type="button" disabled title="Chức năng xem trước chưa được triển khai">Xem trước (mô phỏng)</button>
+            <button class="btn primary" type="submit">Xuất bản &amp; Duyệt hồ sơ →</button>
+          </div>
+          <p class="hint">Liên kết chuyển sang màn hình hồ sơ mẫu; không thực sự xuất bản chiến dịch hoặc tạo đơn ứng tuyển.</p>
+        </div>
+      </section>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="shell">ClubFlow · Bản mẫu giao diện PA#2 · Dữ liệu minh họa, không lưu thay đổi</div>
+  </footer>
+</body>
+</html>
