@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ClubFlow — quy trình tuyển thành viên câu lạc bộ">
+  <title>Lập lịch phỏng vấn | ClubFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+  <header class="site-header">
+    <div class="shell head">
+      <a class="logo" href="index.html" aria-label="ClubFlow, về trang chiến dịch"><span class="logo-mark">✦</span> Club<span class="accent">Flow</span></a>
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a href="index.html">Chiến dịch</a>
+        <a href="review.html">Duyệt hồ sơ</a>
+        <a href="interview.html" aria-current="page">Lịch phỏng vấn</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell" id="main">
+    <div class="crumb">Quản lý tuyển thành viên <span aria-hidden="true">/</span> Lịch phỏng vấn</div>
+    <div class="eyebrow">CLB Công nghệ thông tin · Tuyển thành viên 2026</div>
+    <h1>Lập lịch phỏng vấn</h1>
+    <p class="lead">Lập lịch cho các đơn Shortlisted, kiểm tra trùng lịch theo ứng viên, người phỏng vấn và phòng.</p>
+    <div class="notice">Chế độ prototype: biểu mẫu và các thao tác nghiệp vụ chỉ minh họa giao diện. Không có cơ sở dữ liệu hoặc lưu lịch thật.</div>
+    <div class="notice warn">
+      <strong>Phát hiện xung đột lịch (Conflict) &amp; Đơn chưa xếp lịch (Unassigned):</strong> Ứng viên <strong>Nguyễn Minh Anh</strong> đang bị trùng 2 ca phỏng vấn (A01 và A02) cùng khung giờ <strong>09:00–09:20 ngày 05/11/2026</strong>, và đơn <strong>A05</strong> chưa có khung giờ trống chung.
+    </div>
+    <div class="stats">
+      <div><strong>5</strong><span>Shortlisted</span></div>
+      <div><strong>2</strong><span>Proposed</span></div>
+      <div><strong>2</strong><span>Conflict</span></div>
+      <div><strong>1</strong><span>Unassigned</span></div>
+    </div>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>01 · Tham số tạo lịch</h2>
+      </div>
+      <div class="panel-body">
+        <div class="form-grid">
+          <div class="field">
+            <label for="date">Ngày phỏng vấn</label>
+            <input id="date" name="date" type="date" value="2026-11-05">
+          </div>
+          <div class="field">
+            <label for="start">Giờ bắt đầu</label>
+            <input id="start" name="start" type="time" value="09:00">
+          </div>
+          <div class="field">
+            <label for="finish">Giờ kết thúc</label>
+            <input id="finish" name="finish" type="time" value="12:00">
+          </div>
+          <div class="field">
+            <label for="duration">Thời lượng mỗi lượt</label>
+            <select id="duration">
+              <option>15 phút</option>
+              <option selected>20 phút</option>
+              <option>30 phút</option>
+            </select>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn secondary" type="button" disabled title="Tạo lịch tự động cần backend">Regenerate Schedule (mô phỏng)</button>
+          <button class="btn secondary" type="button" disabled title="Xuất lịch chưa được triển khai">Export Timetable (mô phỏng)</button>
+        </div>
+        <p class="hint">Người phỏng vấn và phòng được chọn từ danh sách có sẵn; mỗi phòng chỉ phục vụ một cuộc phỏng vấn tại một thời điểm.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>02 · Người phỏng vấn và phòng</h2>
+      </div>
+      <div class="panel-body">
+        <div class="resource-grid">
+          <div>
+            <h3>Người phỏng vấn (Không trùng danh sách ứng viên)</h3>
+            <p><strong>Trần Thanh Tùng</strong> · Ban Truyền thông · 09:00–11:00</p>
+            <p><strong>Phan Minh Đức</strong> · Ban Sự kiện · 09:00–11:00</p>
+            <p><strong>Ngô Ngọc Yến</strong> · Ban Kỹ thuật · 09:00–09:20</p>
+          </div>
+          <div>
+            <h3>Phòng hiện có</h3>
+            <p><strong>Phòng A</strong> · Tầng 2 (Media Lab)</p>
+            <p><strong>Phòng B</strong> · Tầng 2 (Phòng họp)</p>
+            <p><strong>Phòng C</strong> · Tầng 3 (Phòng Kỹ thuật)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>03 · Bảng lịch dự kiến (5 đơn Shortlisted)</h2>
+      </div>
+      <div class="panel-body">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Bảng lịch phỏng vấn có thể cuộn ngang">
+          <table>
+            <thead>
+              <tr>
+                <th>Đơn</th>
+                <th>Ứng viên</th>
+                <th>Vị trí</th>
+                <th>Ngày / Giờ</th>
+                <th>Người phỏng vấn</th>
+                <th>Phòng</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>A01</strong></td>
+                <td>Nguyễn Minh Anh</td>
+                <td>Ban Truyền thông</td>
+                <td>05/11/2026 · 09:00–09:20</td>
+                <td>Trần Thanh Tùng</td>
+                <td>Phòng A</td>
+                <td><span class="pill bad">Conflict (Trùng giờ A02)</span></td>
+                <td><button class="btn small secondary" type="button" disabled title="Sửa xung đột ở PA sau">Resolve</button></td>
+              </tr>
+              <tr>
+                <td><strong>A02</strong></td>
+                <td>Nguyễn Minh Anh</td>
+                <td>Ban Kỹ thuật</td>
+                <td>05/11/2026 · 09:00–09:20</td>
+                <td>Ngô Ngọc Yến</td>
+                <td>Phòng C</td>
+                <td><span class="pill bad">Conflict (Trùng giờ A01)</span></td>
+                <td><button class="btn small secondary" type="button" disabled title="Sửa xung đột ở PA sau">Resolve</button></td>
+              </tr>
+              <tr>
+                <td><strong>A03</strong></td>
+                <td>Lê Thu Hà</td>
+                <td>Ban Truyền thông</td>
+                <td>05/11/2026 · 09:20–09:40</td>
+                <td>Trần Thanh Tùng</td>
+                <td>Phòng A</td>
+                <td><span class="pill good">Proposed</span></td>
+                <td><button class="btn small secondary" type="button" disabled title="Chỉnh sửa ở PA sau">Edit</button></td>
+              </tr>
+              <tr>
+                <td><strong>A04</strong></td>
+                <td>Phạm Quốc Bảo</td>
+                <td>Ban Sự kiện</td>
+                <td>05/11/2026 · 09:20–09:40</td>
+                <td>Phan Minh Đức</td>
+                <td>Phòng B</td>
+                <td><span class="pill good">Proposed</span></td>
+                <td><button class="btn small secondary" type="button" disabled title="Chỉnh sửa ở PA sau">Edit</button></td>
+              </tr>
+              <tr>
+                <td><strong>A05</strong></td>
+                <td>Đỗ Đức Thắng</td>
+                <td>Ban Kỹ thuật</td>
+                <td>Chưa xếp (Hết ca trống của Ngô Ngọc Yến)</td>
+                <td>Chưa phân công</td>
+                <td>Chưa phân phòng</td>
+                <td><span class="pill pending">Unassigned</span></td>
+                <td><button class="btn small secondary" type="button" disabled title="Gán ca ở PA sau">+ Assign Slot</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="hint">Tổng cộng: 2 Proposed + 2 Conflict + 1 Unassigned = 5 đơn Shortlisted. A01 và A02 của cùng sinh viên Nguyễn Minh Anh đang trùng khung giờ 09:00–09:20.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>04 · Rà soát và xác nhận</h2>
+      </div>
+      <div class="panel-body">
+        <div class="notice warn">
+          <strong>Chưa thể phê duyệt (Blocked).</strong> Còn 2 đơn đang xung đột giờ (A01, A02) và 1 đơn chưa xếp được lịch (A05), đồng thời còn 2 đơn ở bước duyệt hồ sơ (A06, A08) đang chờ duyệt. Hệ thống chỉ cho phép xác nhận khi chiến dịch đã đóng đơn, mọi đơn đã duyệt và không còn Unassigned hoặc Conflict.
+        </div>
+        <div class="actions">
+          <button class="btn secondary" type="button" disabled title="Lưu lịch nháp cần backend">Save Changes (mô phỏng)</button>
+          <button class="btn primary" type="button" disabled title="Không thể xác nhận khi còn Conflict và Unassigned">Approve &amp; Confirm Schedule (bị khóa)</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="flow-nav">
+      <a class="btn secondary" href="review.html">← Quay lại duyệt hồ sơ</a>
+      <a class="btn secondary" href="index.html">Về chiến dịch</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="shell">ClubFlow · Bản mẫu giao diện PA#2 · Dữ liệu minh họa, không lưu thay đổi</div>
+  </footer>
+</body>
+</html>
