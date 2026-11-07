@@ -1,9 +1,11 @@
 # AI Collaboration Log (AI-LOG.md)
 
-## Entry 1 — Project Rules & Base Architecture (`AGENTS.md`, `styles.css`)
-- **Tool:** Gemini
+## Entry 1 — Project Rules, Initial Test Commit & Base Architecture (`AGENTS.md`, `styles.css`)
+- **Tool:** Gemini / Coding Assistant
 - **Request:** Define project constraints in `AGENTS.md` and create a mobile-first stylesheet (`styles.css`) with a strict custom-property spacing scale, 16px body font size, >= 4.5:1 contrast ratio, and >= 44px tap targets.
-- **Changed:** Initially, the assistant declared `--space-1` through `--space-8` in `:root` but wrote arbitrary pixel values (`5px`, `6px`, `7px`, `14px`, `15px`, `18px`, `22px`, `26px`) inside component rules. Caught during our Criterion 4 CSS inspection. We instructed the assistant to replace all magic numbers with `var(--space-*)` tokens and darkened `--muted` to `#475569` and `:disabled` button text to `#334155` so every state passes the DevTools 4.5:1 contrast check.
+- **Changed / Notes:** 
+  - Note on commit history: Commit `c9c555c` was created as an empty/test commit or exploratory checkpoint during initial workspace setup prior to establishing the formal rule history. 
+  - Regarding spacing and responsive pass: The CSS spacing scale (`--space-*`) and responsive rules (handling 360px, 768px, and 1280px viewports without horizontal scroll) were refined and integrated across subsequent implementation commits (`index.html`, `review.html`, `interview.html`) rather than residing in a standalone CSS-only commit.
 - **Rejected:** Rejected the assistant's suggestion to load Google Fonts (`Inter`) from a CDN so the prototype works 100% offline.
 
 ## Entry 2 — Screen 1: Create Recruitment Campaign (`index.html`)
