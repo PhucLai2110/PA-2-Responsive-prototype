@@ -5,8 +5,8 @@
 - **Milestone:** PA#2 — Responsive Prototype (ClubFlow)
 - **Team Members:**
   - Lai Phạm Như Phúc — `24127106`
-  - [Họ và Tên Thành viên 2] — `[MSSV 2]`
-  - [Họ và Tên Thành viên 3] — `[MSSV 3]`
+  - Nguyễn Thục Nghi — `24127207`
+  - Trần Văn Nam — `24127459`
 - **Self-Assessed Total Score:** **96 / 100**
 
 ---
