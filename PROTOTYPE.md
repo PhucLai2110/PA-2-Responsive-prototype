@@ -4,8 +4,8 @@
 | Full Name | Student ID | Role / Primary Screen |
 | :--- | :--- | :--- |
 | Lai Phạm Như Phúc | 24127106 | Screen 1 (`index.html`), CSS system & W3C verification |
-| Nguyễn Thục Nghi | 24127207 | Screen 2 (`interview.html`) & Responsive layout |
-| Trần Văn Nam | 24127459 | Screen 3 (`review.html`) & Schedule conflict logic |
+| Nguyễn Thục Nghi | 24127207 | Screen 3 (`interview.html`) & Responsive layout |
+| Trần Văn Nam | 24127459 | Screen 2 (`review.html`) & Schedule conflict logic |
 
 ## 2. How to Open It
 - **How to open:** Open `index.html` directly in any browser from the repository folder (double-click or `file://`).
