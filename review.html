@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ClubFlow — quy trình tuyển thành viên câu lạc bộ">
+  <title>Duyệt hồ sơ ứng tuyển | ClubFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Bỏ qua điều hướng</a>
+  <header class="site-header">
+    <div class="shell head">
+      <a class="logo" href="index.html" aria-label="ClubFlow, về trang chiến dịch"><span class="logo-mark">✦</span> Club<span class="accent">Flow</span></a>
+      <nav class="nav" aria-label="Điều hướng chính">
+        <a href="index.html">Chiến dịch</a>
+        <a href="review.html" aria-current="page">Duyệt hồ sơ</a>
+        <a href="interview.html">Lịch phỏng vấn</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell" id="main">
+    <div class="crumb">Quản lý tuyển thành viên <span aria-hidden="true">/</span> Duyệt hồ sơ</div>
+    <div class="eyebrow">CLB Công nghệ thông tin · Tuyển thành viên 2026 · Hạn nộp: 30/10/2026</div>
+    <h1>Duyệt hồ sơ ứng tuyển</h1>
+    <p class="lead">Xem từng đơn ứng tuyển độc lập, đọc CV và thư động lực, ghi chú và đánh dấu kết quả sàng lọc.</p>
+    <div class="notice">Chế độ prototype: biểu mẫu và các thao tác nghiệp vụ chỉ minh họa giao diện. Không có cơ sở dữ liệu hoặc lưu lịch thật.</div>
+    <div class="stats">
+      <div><strong>8</strong><span>Đơn ứng tuyển (7 ứng viên)</span></div>
+      <div><strong>2</strong><span>Chờ duyệt</span></div>
+      <div><strong>5</strong><span>Shortlisted</span></div>
+      <div><strong>1</strong><span>Rejected</span></div>
+    </div>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>01 · Tìm kiếm và lọc hồ sơ</h2>
+      </div>
+      <div class="panel-body">
+        <div class="form-grid">
+          <div class="field">
+            <label for="query">Tìm theo tên hoặc mã đơn</label>
+            <input id="query" name="query" type="search" value="" placeholder="Nhập tên hoặc mã đơn">
+          </div>
+          <div class="field">
+            <label for="status">Trạng thái</label>
+            <select id="status">
+              <option>Tất cả trạng thái</option>
+              <option>Chờ duyệt</option>
+              <option>Shortlisted</option>
+              <option>Rejected</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="position-filter">Vị trí</label>
+            <select id="position-filter">
+              <option>Tất cả vị trí</option>
+              <option>Ban Truyền thông</option>
+              <option>Ban Sự kiện</option>
+              <option>Ban Kỹ thuật</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sort-order">Sắp xếp danh sách</label>
+            <select id="sort-order">
+              <option>Ngày nộp (Mới nhất)</option>
+              <option>Ngày nộp (Cũ nhất)</option>
+              <option>Mã đơn (A01 → A08)</option>
+            </select>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn secondary" type="button" disabled title="Bộ lọc sẽ được triển khai ở PA sau">Áp dụng lọc (mô phỏng)</button>
+          <button class="btn secondary" type="button" disabled title="Xuất CSV sẽ được triển khai ở PA sau">Xuất CSV (mô phỏng)</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="review-workspace">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>02 · Danh sách hồ sơ · 8 đơn (Trang 1/1)</h2>
+        </div>
+        <div class="panel-body">
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Bảng đơn ứng tuyển có thể cuộn ngang">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mã đơn</th>
+                  <th>Ứng viên</th>
+                  <th>Vị trí</th>
+                  <th>Ngày nộp</th>
+                  <th>Trạng thái</th>
+                  <th>Chi tiết</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>A01</strong></td>
+                  <td>Nguyễn Minh Anh</td>
+                  <td>Ban Truyền thông</td>
+                  <td>18/10/2026</td>
+                  <td><span class="pill good">Shortlisted</span></td>
+                  <td><a class="btn small secondary" href="#a01">Xem hồ sơ</a></td>
+                </tr>
+                <tr>
+                  <td><strong>A02</strong></td>
+                  <td>Nguyễn Minh Anh</td>
+                  <td>Ban Kỹ thuật</td>
+                  <td>18/10/2026</td>
+                  <td><span class="pill good">Shortlisted</span></td>
+                  <td><a class="btn small secondary" href="#a02">Xem hồ sơ</a></td>
+                </tr>
+                <tr>
+                  <td><strong>A03</strong></td>
+                  <td>Lê Thu Hà</td>
+                  <td>Ban Truyền thông</td>
+                  <td>19/10/2026</td>
+                  <td><span class="pill good">Shortlisted</span></td>
+                  <td><a class="btn small secondary" href="#a03">Xem hồ sơ</a></td>
+                </tr>
+                <tr>
+                  <td><strong>A04</strong></td>
+                  <td>Phạm Quốc Bảo</td>
+                  <td>Ban Sự kiện</td>
+                  <td>20/10/2026</td>
+                  <td><span class="pill good">Shortlisted</span></td>
+                  <td><a class="btn small secondary" href="#a04">Xem hồ sơ</a></td>
+                </tr>
+                <tr>
+                  <td><strong>A05</strong></td>
+                  <td>Đỗ Đức Thắng</td>
+                  <td>Ban Kỹ thuật</td>
+                  <td>21/10/2026</td>
+                  <td><span class="pill good">Shortlisted</span></td>
+                  <td><a class="btn small secondary" href="#a05">Xem hồ sơ</a></td>
+                </tr>
+                <tr>
+                  <td><strong>A06</strong></td>
+                  <td>Võ Mai Linh</td>
+                  <td>Ban Truyền thông</td>
+                  <td>22/10/2026</td>
+                  <td><span class="pill pending">Chờ duyệt</span></td>
+                  <td><a class="btn small secondary" href="#a06">Xem hồ sơ</a></td>
+                </tr>
+                <tr>
+                  <td><strong>A07</strong></td>
+                  <td>Bùi Quang Huy</td>
+                  <td>Ban Sự kiện</td>
+                  <td>23/10/2026</td>
+                  <td><span class="pill bad">Rejected</span></td>
+                  <td><a class="btn small secondary" href="#a07">Xem hồ sơ</a></td>
+                </tr>
+                <tr>
+                  <td><strong>A08</strong></td>
+                  <td>Nguyễn Hoàng Phương Thảo Như Quỳnh</td>
+                  <td>Ban Sự kiện</td>
+                  <td>24/10/2026</td>
+                  <td><span class="pill pending">Chờ duyệt</span></td>
+                  <td><a class="btn small secondary" href="#a08">Xem hồ sơ</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="hint">Một sinh viên có thể có nhiều mã đơn khác nhau. A01 và A02 là hai đơn độc lập của cùng một ứng viên.</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="Ngăn chi tiết hồ sơ ứng tuyển">
+        <div class="panel-head">
+          <h2>03 · Chi tiết hồ sơ &amp; Đánh giá (Application Drawer)</h2>
+          <p>Hiển thị song song với danh sách để đối chiếu trực tiếp.</p>
+        </div>
+        <div class="panel-body">
+          <details class="app-detail" id="a01" open>
+            <summary>Hồ sơ A01 · Nguyễn Minh Anh · Ban Truyền thông</summary>
+            <div class="detail-body">
+              <div class="detail-grid">
+                <div><span class="meta">Mã đơn</span><strong>A01</strong></div>
+                <div><span class="meta">Ứng viên</span><strong>Nguyễn Minh Anh (MSSV: 24120101)</strong></div>
+                <div><span class="meta">Vị trí</span><strong>Ban Truyền thông</strong></div>
+                <div><span class="meta">Trạng thái</span><strong>Shortlisted</strong></div>
+              </div>
+              <p><strong>Thư động lực (142/300 từ):</strong> Em đã có kinh nghiệm quản lý fanpage học thuật và mong muốn tham gia Ban Truyền thông để xây dựng nội dung sáng tạo, lan tỏa các sự kiện công nghệ của câu lạc bộ.</p>
+              <p><strong>CV đính kèm:</strong> A01-NguyenMinhAnh-CV.pdf (1.4 MB, PDF mẫu).</p>
+              <div class="field">
+                <label for="note-A01">Ghi chú nội bộ của ban tuyển dụng (Chỉ Executive thấy)</label>
+                <textarea id="note-A01" rows="2">Portfolio viết bài tốt, phù hợp định hướng truyền thông. Đề xuất vào vòng phỏng vấn.</textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="button" disabled title="Quyết định cần backend">Shortlist Candidate (mô phỏng)</button>
+                <button class="btn secondary" type="button" disabled title="Quyết định cần backend">Reject (mô phỏng)</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="app-detail" id="a02">
+            <summary>Hồ sơ A02 · Nguyễn Minh Anh · Ban Kỹ thuật</summary>
+            <div class="detail-body">
+              <div class="detail-grid">
+                <div><span class="meta">Mã đơn</span><strong>A02</strong></div>
+                <div><span class="meta">Ứng viên</span><strong>Nguyễn Minh Anh (MSSV: 24120101)</strong></div>
+                <div><span class="meta">Vị trí</span><strong>Ban Kỹ thuật</strong></div>
+                <div><span class="meta">Trạng thái</span><strong>Shortlisted</strong></div>
+              </div>
+              <p><strong>Thư động lực:</strong> Em mong muốn tham gia Ban Kỹ thuật để phát triển hệ thống web nội bộ của câu lạc bộ.</p>
+              <p><strong>CV đính kèm:</strong> A02-NguyenMinhAnh-CV.pdf (1.5 MB, PDF mẫu).</p>
+              <div class="field">
+                <label for="note-A02">Ghi chú nội bộ của ban tuyển dụng</label>
+                <textarea id="note-A02" rows="2" placeholder="Nhập ghi chú đánh giá (không lưu)"></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="button" disabled title="Quyết định cần backend">Shortlist Candidate (mô phỏng)</button>
+                <button class="btn secondary" type="button" disabled title="Quyết định cần backend">Reject (mô phỏng)</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="app-detail" id="a03">
+            <summary>Hồ sơ A03 · Lê Thu Hà · Ban Truyền thông</summary>
+            <div class="detail-body">
+              <div class="detail-grid">
+                <div><span class="meta">Mã đơn</span><strong>A03</strong></div>
+                <div><span class="meta">Ứng viên</span><strong>Lê Thu Hà</strong></div>
+                <div><span class="meta">Vị trí</span><strong>Ban Truyền thông</strong></div>
+                <div><span class="meta">Trạng thái</span><strong>Shortlisted</strong></div>
+              </div>
+              <p><strong>Thư động lực:</strong> Em mong muốn tham gia Ban Truyền thông để học hỏi và đóng góp cho câu lạc bộ.</p>
+              <p><strong>CV đính kèm:</strong> A03-CV.pdf (tệp mẫu).</p>
+              <div class="field">
+                <label for="note-A03">Ghi chú nội bộ của ban tuyển dụng</label>
+                <textarea id="note-A03" rows="2" placeholder="Nhập ghi chú đánh giá (không lưu)"></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="button" disabled title="Quyết định cần backend">Shortlist Candidate (mô phỏng)</button>
+                <button class="btn secondary" type="button" disabled title="Quyết định cần backend">Reject (mô phỏng)</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="app-detail" id="a04">
+            <summary>Hồ sơ A04 · Phạm Quốc Bảo · Ban Sự kiện</summary>
+            <div class="detail-body">
+              <div class="detail-grid">
+                <div><span class="meta">Mã đơn</span><strong>A04</strong></div>
+                <div><span class="meta">Ứng viên</span><strong>Phạm Quốc Bảo</strong></div>
+                <div><span class="meta">Vị trí</span><strong>Ban Sự kiện</strong></div>
+                <div><span class="meta">Trạng thái</span><strong>Shortlisted</strong></div>
+              </div>
+              <p><strong>Thư động lực:</strong> Em mong muốn tham gia Ban Sự kiện để rèn luyện kỹ năng điều phối chương trình.</p>
+              <p><strong>CV đính kèm:</strong> A04-CV.pdf (tệp mẫu).</p>
+              <div class="field">
+                <label for="note-A04">Ghi chú nội bộ của ban tuyển dụng</label>
+                <textarea id="note-A04" rows="2" placeholder="Nhập ghi chú đánh giá (không lưu)"></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="button" disabled title="Quyết định cần backend">Shortlist Candidate (mô phỏng)</button>
+                <button class="btn secondary" type="button" disabled title="Quyết định cần backend">Reject (mô phỏng)</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="app-detail" id="a05">
+            <summary>Hồ sơ A05 · Đỗ Đức Thắng · Ban Kỹ thuật</summary>
+            <div class="detail-body">
+              <div class="detail-grid">
+                <div><span class="meta">Mã đơn</span><strong>A05</strong></div>
+                <div><span class="meta">Ứng viên</span><strong>Đỗ Đức Thắng</strong></div>
+                <div><span class="meta">Vị trí</span><strong>Ban Kỹ thuật</strong></div>
+                <div><span class="meta">Trạng thái</span><strong>Shortlisted</strong></div>
+              </div>
+              <p><strong>Thư động lực:</strong> Em mong muốn tham gia Ban Kỹ thuật để đóng góp xây dựng sản phẩm web của CLB.</p>
+              <p><strong>CV đính kèm:</strong> A05-CV.pdf (tệp mẫu).</p>
+              <div class="field">
+                <label for="note-A05">Ghi chú nội bộ của ban tuyển dụng</label>
+                <textarea id="note-A05" rows="2" placeholder="Nhập ghi chú đánh giá (không lưu)"></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="button" disabled title="Quyết định cần backend">Shortlist Candidate (mô phỏng)</button>
+                <button class="btn secondary" type="button" disabled title="Quyết định cần backend">Reject (mô phỏng)</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="app-detail" id="a06">
+            <summary>Hồ sơ A06 · Võ Mai Linh · Ban Truyền thông</summary>
+            <div class="detail-body">
+              <div class="detail-grid">
+                <div><span class="meta">Mã đơn</span><strong>A06</strong></div>
+                <div><span class="meta">Ứng viên</span><strong>Võ Mai Linh</strong></div>
+                <div><span class="meta">Vị trí</span><strong>Ban Truyền thông</strong></div>
+                <div><span class="meta">Trạng thái</span><strong>Chờ duyệt</strong></div>
+              </div>
+              <p><strong>Thư động lực:</strong> Em mong muốn tham gia Ban Truyền thông để nâng cao kỹ năng viết bài truyền thông.</p>
+              <p><strong>CV đính kèm:</strong> A06-CV.pdf (tệp mẫu).</p>
+              <div class="field">
+                <label for="note-A06">Ghi chú nội bộ của ban tuyển dụng</label>
+                <textarea id="note-A06" rows="2" placeholder="Nhập ghi chú đánh giá (không lưu)"></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="button" disabled title="Quyết định cần backend">Shortlist Candidate (mô phỏng)</button>
+                <button class="btn secondary" type="button" disabled title="Quyết định cần backend">Reject (mô phỏng)</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="app-detail" id="a07">
+            <summary>Hồ sơ A07 · Bùi Quang Huy · Ban Sự kiện</summary>
+            <div class="detail-body">
+              <div class="detail-grid">
+                <div><span class="meta">Mã đơn</span><strong>A07</strong></div>
+                <div><span class="meta">Ứng viên</span><strong>Bùi Quang Huy</strong></div>
+                <div><span class="meta">Vị trí</span><strong>Ban Sự kiện</strong></div>
+                <div><span class="meta">Trạng thái</span><strong>Rejected</strong></div>
+              </div>
+              <p><strong>Thư động lực:</strong> Em mong muốn tham gia Ban Sự kiện để học hỏi công tác hậu cần.</p>
+              <p><strong>CV đính kèm:</strong> A07-CV.pdf (tệp mẫu).</p>
+              <div class="field">
+                <label for="note-A07">Ghi chú nội bộ của ban tuyển dụng</label>
+                <textarea id="note-A07" rows="2" placeholder="Nhập ghi chú đánh giá (không lưu)"></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="button" disabled title="Quyết định cần backend">Shortlist Candidate (mô phỏng)</button>
+                <button class="btn secondary" type="button" disabled title="Quyết định cần backend">Reject (mô phỏng)</button>
+              </div>
+            </div>
+          </details>
+
+          <details class="app-detail" id="a08">
+            <summary>Hồ sơ A08 · Nguyễn Hoàng Phương Thảo Như Quỳnh · Ban Sự kiện</summary>
+            <div class="detail-body">
+              <div class="detail-grid">
+                <div><span class="meta">Mã đơn</span><strong>A08</strong></div>
+                <div><span class="meta">Ứng viên</span><strong>Nguyễn Hoàng Phương Thảo Như Quỳnh</strong></div>
+                <div><span class="meta">Vị trí</span><strong>Ban Sự kiện</strong></div>
+                <div><span class="meta">Trạng thái</span><strong>Chờ duyệt</strong></div>
+              </div>
+              <p><strong>Thư động lực:</strong> Em mong muốn tham gia Ban Sự kiện để đóng góp cho các hoạt động sinh viên.</p>
+              <p><strong>CV đính kèm:</strong> A08-CV.pdf (tệp mẫu).</p>
+              <div class="field">
+                <label for="note-A08">Ghi chú nội bộ của ban tuyển dụng</label>
+                <textarea id="note-A08" rows="2" placeholder="Nhập ghi chú đánh giá (không lưu)"></textarea>
+              </div>
+              <div class="actions">
+                <button class="btn primary" type="button" disabled title="Quyết định cần backend">Shortlist Candidate (mô phỏng)</button>
+                <button class="btn secondary" type="button" disabled title="Quyết định cần backend">Reject (mô phỏng)</button>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <div class="flow-nav">
+      <a class="btn secondary" href="index.html">← Quay lại chiến dịch</a>
+      <a class="btn primary" href="interview.html">Tiếp tục: Lịch phỏng vấn →</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="shell">ClubFlow · Bản mẫu giao diện PA#2 · Dữ liệu minh họa, không lưu thay đổi</div>
+  </footer>
+</body>
+</html>
